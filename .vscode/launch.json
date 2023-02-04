@@ -1,0 +1,147 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch BinarySearchInMatrices",
+            "request": "launch",
+            "mainClass": "BinarySearchInMatrices",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindSingleElement",
+            "request": "launch",
+            "mainClass": "FindSingleElement",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch NandItsDouble",
+            "request": "launch",
+            "mainClass": "NandItsDouble",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FairCandySwap",
+            "request": "launch",
+            "mainClass": "FairCandySwap",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SearchInsertPosition",
+            "request": "launch",
+            "mainClass": "SearchInsertPosition",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch KthMissingPositiveInteger",
+            "request": "launch",
+            "mainClass": "KthMissingPositiveInteger",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch ValidPerfectSquare",
+            "request": "launch",
+            "mainClass": "ValidPerfectSquare",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SqrtOfANumber",
+            "request": "launch",
+            "mainClass": "SqrtOfANumber",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch CeilingOfANumber",
+            "request": "launch",
+            "mainClass": "CeilingOfANumber",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindInMountainArray",
+            "request": "launch",
+            "mainClass": "FindInMountainArray",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindNumberOfRotation",
+            "request": "launch",
+            "mainClass": "FindNumberOfRotation",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FloorOfANumber",
+            "request": "launch",
+            "mainClass": "FloorOfANumber",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Intro",
+            "request": "launch",
+            "mainClass": "Intro",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SearchInRotatedSortedArray",
+            "request": "launch",
+            "mainClass": "SearchInRotatedSortedArray",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SearchInRotatedSortedArrayWithDuplicates",
+            "request": "launch",
+            "mainClass": "SearchInRotatedSortedArrayWithDuplicates",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SplitArrayLargestSum",
+            "request": "launch",
+            "mainClass": "SplitArrayLargestSum",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch findFirstAndLastOccurence",
+            "request": "launch",
+            "mainClass": "findFirstAndLastOccurence",
+            "projectName": "BinarySearch_a2cb033b"
+        },
+        {
+            "type": "java",
+            "name": "Launch findThePeakIndex",
+            "request": "launch",
+            "mainClass": "findThePeakIndex",
+            "projectName": "BinarySearch_a2cb033b"
+        }
+    ]
+}
