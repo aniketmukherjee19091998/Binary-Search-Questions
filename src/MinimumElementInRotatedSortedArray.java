@@ -51,18 +51,38 @@ public class MinimumElementInRotatedSortedArray {
         }
     }
 
+    static int findKRotation(int arr[]) {
+        // code here
+        int l = 0, r = arr.length - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (arr[l] <= arr[r]) {
+                return l;
+            }
+            if (arr[mid] >= arr[l]) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        return r;
+    }
+
     public static void main(String[] args) {
         Random random = new Random();
-        int[] arr = new int[random.nextInt(11, 100)];
+        int[] arr = new int[random.nextInt(1, 1000000)];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(-10000, 10000);
+            arr[i] = random.nextInt(-1000000, 1000000);
         }
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
+        // System.out.println(Arrays.toString(arr));
         // now to rotate it
         Rotate(arr, random.nextInt(1, arr.length - 1), arr.length);
-        System.out.println("\n__________________________\n");
-        System.out.println(Arrays.toString(arr));
+        // System.out.println("\n__________________________\n");
+        System.out.println("The number of rotations : "
+                + findKRotation(arr));
+        // System.out.println("\n__________________________\n");
+        // System.out.println(Arrays.toString(arr));
         System.out.println("\n___________________________\n");
         System.out.println("The minimum element is : " + search(arr));
     }
