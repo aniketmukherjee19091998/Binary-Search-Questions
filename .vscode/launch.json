@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ShippingCapacity",
+            "request": "launch",
+            "mainClass": "ShippingCapacity",
+            "projectName": "BinarySearch_e9bb1e8d"
+        },
+        {
+            "type": "java",
             "name": "Launch BinarySearchInMatrices",
             "request": "launch",
             "mainClass": "BinarySearchInMatrices",
