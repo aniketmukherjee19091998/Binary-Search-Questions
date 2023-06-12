@@ -52,6 +52,6 @@ public class ShippingCapacity {
         }
 
         int days = random.nextInt(1, weights.length - 1);
-        System.out.println("The maximum capacity of the ship is : " + capacity(weights, days));
+        System.out.println("The minimum capacity of the ship is : " + capacity(weights, days));
     }
 }
