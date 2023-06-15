@@ -42,6 +42,33 @@ public class KthElementOfTwoSortedArrays {
         return ans;
     }
 
+    // The approach is exactly similar to the median of two sorted array problem.
+    // T.C: O(log (min(m, n))) S.C: O(1)
+    // It is probably the most optimized version, I do not know how I can optimized
+    // it futher.
+    private static int kthElement_bs(int[] arr1, int[] arr2, int k) {
+        int m = arr1.length, n = arr2.length;
+        if (m > n)
+            return kthElement_bs(arr2, arr1, k);
+        int l = Math.max(0, k - n), r = Math.min(k, m);
+        while (l <= r) {
+            int cut_1 = (l + r) >> 1;
+            int cut_2 = k - cut_1;
+            int l1 = (cut_1 == 0) ? Integer.MIN_VALUE : arr1[cut_1 - 1];
+            int r1 = (cut_1 == m) ? Integer.MAX_VALUE : arr1[cut_1];
+            int l2 = (cut_2 == 0) ? Integer.MIN_VALUE : arr2[cut_2 - 1];
+            int r2 = (cut_2 == n) ? Integer.MAX_VALUE : arr2[cut_2];
+            if (l1 <= r2 && l2 <= r1) {
+                return Math.max(l1, l2);
+            } else if (l1 > r2) {
+                r = cut_1 - 1;
+            } else {
+                l = cut_1 + 1;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         Random random = new Random();
         int[] arr1 = new int[random.nextInt(1, 10)];
@@ -60,5 +87,6 @@ public class KthElementOfTwoSortedArrays {
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));
         System.out.println(kthElement(arr1, arr2, n, m, k));
+        System.out.println(kthElement_bs(arr1, arr2, k));
     }
 }
