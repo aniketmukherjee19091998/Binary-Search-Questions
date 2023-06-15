@@ -3,36 +3,43 @@ import java.util.Random;
 
 public class KthElementOfTwoSortedArrays {
 
-    // most obvious solution but probably not the best T.C: O(n+m) S.C: O(n+m)
+    // probably the most obvious solution but probably not the best T.C: O(n+m) S.C:
+    // O(1)
+    // we can also use extra space of O(m+n) to find the kth element as temp[k];
     private static int kthElement(int arr1[], int arr2[], int n, int m, int k) {
-        int[] ans = new int[n + m];
         int i = 0, j = 0;
         int ptr = 0;
+        int ans = -1;
         while (i < n && j < m) {
             if (arr1[i] > arr2[j]) {
-                ans[ptr] = arr2[j];
+                ans = arr2[j];
                 j++;
             } else {
-                ans[ptr] = arr1[i];
+                ans = arr1[i];
                 i++;
             }
-            ptr++;
+            ++ptr;
+            if (ptr == k) {
+                return ans;
+            }
         }
         while (i < n) {
-            ans[ptr] = arr1[i];
+            ans = arr1[i];
             i++;
-            ptr++;
+            ++ptr;
+            if (ptr == k) {
+                return ans;
+            }
         }
         while (j < m) {
-            ans[ptr] = arr2[j];
+            ans = arr2[j];
             j++;
-            ptr++;
+            ++ptr;
+            if (ptr == k) {
+                return ans;
+            }
         }
-        System.out.println("k = " + k + "\n");
-        System.out.println(Arrays.toString(arr1));
-        System.out.println(Arrays.toString(arr2));
-        System.out.println(Arrays.toString(ans));
-        return ans[k - 1];
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -49,6 +56,9 @@ public class KthElementOfTwoSortedArrays {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
         int k = random.nextInt(1, n + m - 1);
+        System.out.println("k = " + k + "\n");
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
         System.out.println(kthElement(arr1, arr2, n, m, k));
     }
 }
